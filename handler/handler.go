@@ -31,6 +31,15 @@ func (h Handler) Create(ctx *gofr.Context) (interface{},error){
 	return resp, nil
 }
 
+func (h Handler) GetAll(ctx *gofr.Context) (interface{},error){
+	resp, err := h.store.GetAll(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return resp, nil
+}
+
+
 func validateID(id string) (int, error){
 	res, err := strconv.Atoi(id)
 	if err != nil {

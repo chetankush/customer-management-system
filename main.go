@@ -1,4 +1,4 @@
-package main 
+package main
 
 import (
 	"car-service/datastore"
@@ -15,7 +15,10 @@ func main(){
 
 	app.POST("/customer", handler.Create)
 	app.GET("/customer", handler.GetAll)
-
+	app.GET("/customer/{id}",handler.GetByID)
+    app.PUT("/customer",handler.Update)
+    app.DELETE("/customer/{id}",handler.Delete)
+	
 	app.Start()
 
 }

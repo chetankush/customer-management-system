@@ -53,7 +53,8 @@ func (d *CustomerDatastore) GetAll(ctx *gofr.Context) ([]model.Customer, error) 
 
 	for rows.Next() {
 		var customer model.Customer
-		if err := rows.Scan(&customer.ID, &customer.Name, &customer.Email, &customer.Phone, &customer.Address, &customer.City, &customer.DateOfBirth, &customer.IsActive); err != nil {
+		err = rows.Scan(&customer.ID, &customer.Name, &customer.Email, &customer.Phone, &customer.Address, &customer.City, &customer.DateOfBirth, &customer.IsActive)
+		if err != nil {
 			return nil, errors.DB{Err: err}
 		}
 		customers = append(customers, customer)
@@ -79,7 +80,7 @@ func (d *CustomerDatastore) GetByID(ctx *gofr.Context, id string) (*model.Custom
 }
 
 func (d *CustomerDatastore) Update(ctx *gofr.Context, customer *model.Customer) (*model.Customer, error) {
-	_, err := ctx.DB().ExecContext(ctx, "UPDATE customers SET name = ?, email = ?, phone = ?, address = ?, city = ?, date_of_birth = ?, is_active = ? WHERE id = ?", customer.IsActive, customer.DateOfBirth, customer.City, customer.Address, customer.Phone, customer.Email, customer.Name, customer.ID)
+	_, err := ctx.DB().ExecContext(ctx, "UPDATE customers SET name = ?, email = ?, phone = ?, address = ?, city = ?, date_of_birth = ?, is_active = ? WHERE id = ?", customer.Name, customer.Email, customer.Phone, customer.Address, customer.City, customer.DateOfBirth, customer.IsActive, customer.ID)
 	if err != nil {
 		return nil, errors.DB{Err: err}
 	}

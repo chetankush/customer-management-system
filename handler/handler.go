@@ -3,8 +3,9 @@ package handler
 import (
 	"car-service/datastore"
 	"car-service/model"
+	"encoding/json"
 	"strconv"
-    "encoding/json"
+
 	"gofr.dev/pkg/errors"
 	"gofr.dev/pkg/gofr"
 )
@@ -66,8 +67,7 @@ func validateID(id string) (int, error) {
 	return res, err
 }
 
-
-func (h Handler) Update(ctx *gofr.Context) (interface{}, error){
+func (h Handler) Update(ctx *gofr.Context) (interface{}, error) {
 	var customer model.Customer
 
 	if err := json.NewDecoder(ctx.Request().Body).Decode(&customer); err != nil {
@@ -75,14 +75,14 @@ func (h Handler) Update(ctx *gofr.Context) (interface{}, error){
 	}
 
 	updatedCustomer, err := h.store.Update(ctx, &customer)
-	if err != nil{
+	if err != nil {
 		return nil, err
 	}
 
 	return updatedCustomer, nil
 }
 
-func(h Handler) Delete(ctx *gofr.Context) (interface{}, error){
+func (h Handler) Delete(ctx *gofr.Context) (interface{}, error) {
 	id := ctx.PathParam("id")
 	if id == "" {
 		return nil, errors.MissingParam{Param: []string{"id"}}
@@ -90,7 +90,7 @@ func(h Handler) Delete(ctx *gofr.Context) (interface{}, error){
 
 	err := h.store.Delete(ctx, id)
 	if err != nil {
-		return nil, errors.DB{Err:err}
+		return nil, errors.DB{Err: err}
 	}
 
 	return "Data Deleted successfully", nil

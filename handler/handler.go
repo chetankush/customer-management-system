@@ -59,13 +59,6 @@ func (h Handler) GetByID(ctx *gofr.Context) (interface{}, error) {
 	return resp, nil
 }
 
-func validateID(id string) (int, error) {
-	res, err := strconv.Atoi(id)
-	if err != nil {
-		return 0, err
-	}
-	return res, err
-}
 
 func (h Handler) Update(ctx *gofr.Context) (interface{}, error) {
 	var customer model.Customer

@@ -4,7 +4,7 @@
 
 # customer management system api using gofr framework
 
-API for customer management system using gofr with crud operations with testing coverage 100%
+API for customer management system using gofr with crud operations
 
 ## Getting Started
 

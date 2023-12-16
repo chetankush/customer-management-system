@@ -11,6 +11,7 @@ import (
 
 type CustomerDatastore struct{}
 
+// factory function for datastore layer
 func NewCustomerDatastore() *CustomerDatastore {
 	return &CustomerDatastore{}
 }

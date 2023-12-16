@@ -4,7 +4,6 @@ import (
 	"car-service/datastore"
 	"car-service/model"
 	"encoding/json"
-	"strconv"
 
 	"gofr.dev/pkg/errors"
 	"gofr.dev/pkg/gofr"
@@ -58,7 +57,6 @@ func (h Handler) GetByID(ctx *gofr.Context) (interface{}, error) {
 
 	return resp, nil
 }
-
 
 func (h Handler) Update(ctx *gofr.Context) (interface{}, error) {
 	var customer model.Customer

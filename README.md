@@ -11,7 +11,9 @@ API for customer management system using gofr with crud operations with testing 
 download the zip by clicking code button on the upper left side of repository home page and extract the file to use it 
 
 run this command -> go run main.go (use it in project root directory terminal on your local machine for development and testing purposes.)
+
 to run the tests -> go test (use it in project root directory terminal on your local machine for testing purposes.)
+
 to see the coverage -> go test -v --cover (to see the coverage of this project)
 
 
@@ -25,24 +27,30 @@ install Gofr -> go get gofr.dev
 install docker on your system then refer this gofr documentation for mysql intallation -> https://gofr.dev/docs/v1/quick-start/connecting-mysql
   
 
-### Installing
+### Installation and Running the project
 
 A step by step series of examples that tell you how to get a development env running
 
 download the project zip and extract it on the desktop to access easily
 
+
 install docker on your system then refer this gofr documentation for mysql intallation and connection -> https://gofr.dev/docs/v1/quick-start/connecting-mysql
+
   
 create your own table and db on mysql - name it as you want
 
+
 use these commands to access the mysql on docker ->
 
- docker exec -it gofr-mysql bash
- bash-4.4# mysql -u root -p<your mysql password for docker image> dont add space after write like this -> -proot876
- show databases (to see all databases)
- use <your database name> that you created using gofr-mysql documentation
+docker exec -it gofr-mysql bash
+
+bash-4.4# mysql -u root -p<your mysql password for docker image> dont add space after write like this -> -proot876
+
+show databases (to see all databases)
+
+use <your database name> that you created using gofr-mysql documentation
  
- then run go run main.go
+then run go run main.go
 
 to see the data go to localhost:3000/customer
 

@@ -104,7 +104,7 @@ func TestGetAllCustomers(t *testing.T) {
 	db, mock, err := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
 
 	if err != nil {
-		ctx.Logger.Error("mock connection failed")
+		ctx.Logger.Error("mock co nnection failed")
 	}
 
 	ctx.DataStore = datastore.DataStore{ORM: db}
@@ -117,8 +117,8 @@ func TestGetAllCustomers(t *testing.T) {
 		err       error
 	}{
 		{"Valid case with customers", []model.Customer{
-			{ID: 1, Name: "John Doe", Email: "john@example.com", Phone: "1234567890", City: "New York", DateOfBirth: "1990-01-01", IsActive: true},
-			{ID: 2, Name: "Jane Smith", Email: "jane@example.com", Phone: "9876543210", City: "San Francisco", DateOfBirth: "1990-01-01", IsActive: true},
+			{ID: 1, Name: "John Doe", Email: "chetankushwah929@gmail.com", Phone: "1234567890", City: "New York", DateOfBirth: "1990-01-01", IsActive: true},
+			{ID: 2, Name: "Jane Smith", Email: "chetankushwah929@gmail.com", Phone: "9876543210", City: "San Francisco", DateOfBirth: "1990-01-01", IsActive: true},
 		}, nil, nil},
 		{"Valid case with no customers", []model.Customer{}, nil, nil},
 		{"Error case", nil, errors.Error("database error"), errors.DB{Err: errors.Error("database error")}},
@@ -160,7 +160,7 @@ func TestGetCustomerByID(t *testing.T) {
 		mockErr  error
 		err      error
 	}{
-		{"Valid case", "1", model.Customer{ID: 1, Name: "Chetan Kushwah", Email: "chetankushwah.com", Phone: "1234567890", City: "New York", DateOfBirth: "1990-01-01", IsActive: true}, nil, nil},
+		{"Valid case", "1", model.Customer{ID: 1, Name: "Chetan Kushwah", Email: "chetankushwah929@gmail.com", Phone: "1234567890", City: "New York", DateOfBirth: "1990-01-01", IsActive: true}, nil, nil},
 		{"Entity not found", "2", model.Customer{}, sql.ErrNoRows, errors.EntityNotFound{Entity: "customer", ID: "2"}},
 		{"Error case", "3", model.Customer{}, errors.Error("database error"), errors.DB{Err: errors.Error("database error")}},
 	}
@@ -199,9 +199,9 @@ func TestUpdateCustomer(t *testing.T) {
 		mockErr  error
 		err      error
 	}{
-		{"Valid case", model.Customer{ID: 1, Name: "Updated Name", Email: "updated@example.com", Phone: "9876543210", Address: "Updated Address", City: "Updated City", DateOfBirth: "1990-01-01", IsActive: true}, nil, nil},
-		{"Entity not found", model.Customer{ID: 2, Name: "Updated Name", Email: "updated@example.com", Phone: "9876543210", Address: "Updated Address", City: "Updated City", DateOfBirth: "1990-01-01", IsActive: true}, sql.ErrNoRows, errors.EntityNotFound{Entity: "customer", ID: "2"}},
-		{"Error case", model.Customer{ID: 3, Name: "Updated Name", Email: "updated@example.com", Phone: "9876543210", Address: "Updated Address", City: "Updated City", DateOfBirth: "1990-01-01", IsActive: true}, errors.Error("database error"), errors.DB{Err: errors.Error("database error")}},
+		{"Valid case", model.Customer{ID: 1, Name: "Updated Name", Email: "updated@gmail.com", Phone: "9876543210", Address: "Updated Address", City: "Updated City", DateOfBirth: "1998-01-01", IsActive: true}, nil, nil},
+		{"Entity not found", model.Customer{ID: 2, Name: "Updated Name", Email: "updated@gmail.com", Phone: "9876573210", Address: "Updated Address", City: "Updated City", DateOfBirth: "1998-01-01", IsActive: true}, sql.ErrNoRows, errors.EntityNotFound{Entity: "customer", ID: "2"}},
+		{"Error case", model.Customer{ID: 3, Name: "Updated Name", Email: "updated@gmail.com", Phone: "9876543810", Address: "Updated Address", City: "Updated City", DateOfBirth: "1998-01-01", IsActive: true}, errors.Error("database error"), errors.DB{Err: errors.Error("database error")}},
 	}
 
 	for i, tc := range tests {

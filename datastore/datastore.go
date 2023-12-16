@@ -16,6 +16,7 @@ func NewCustomerDatastore() *CustomerDatastore {
 	return &CustomerDatastore{}
 }
 
+// Create -- used to make post request
 func (d *CustomerDatastore) Create(ctx *gofr.Context, customer *model.Customer) (*model.Customer, error) {
 	var resp model.Customer
 
@@ -44,6 +45,7 @@ func (d *CustomerDatastore) Create(ctx *gofr.Context, customer *model.Customer) 
 	return &resp, nil
 }
 
+// GetAll - used to make Get request and to get all data
 func (d *CustomerDatastore) GetAll(ctx *gofr.Context) ([]model.Customer, error) {
 	var customers []model.Customer
 
@@ -63,6 +65,7 @@ func (d *CustomerDatastore) GetAll(ctx *gofr.Context) ([]model.Customer, error) 
 	return customers, nil
 }
 
+// GetByID -- used to get data by ID by making get request
 func (d *CustomerDatastore) GetByID(ctx *gofr.Context, id string) (*model.Customer, error) {
 	var resp model.Customer
 
@@ -80,6 +83,7 @@ func (d *CustomerDatastore) GetByID(ctx *gofr.Context, id string) (*model.Custom
 	}
 }
 
+// Update -- used to update data by making put request
 func (d *CustomerDatastore) Update(ctx *gofr.Context, customer *model.Customer) (*model.Customer, error) {
 	_, err := ctx.DB().ExecContext(ctx, "UPDATE customers SET name = ?, email = ?, phone = ?, address = ?, city = ?, date_of_birth = ?, is_active = ? WHERE id = ?", customer.Name, customer.Email, customer.Phone, customer.Address, customer.City, customer.DateOfBirth, customer.IsActive, customer.ID)
 	if err != nil {
@@ -89,6 +93,7 @@ func (d *CustomerDatastore) Update(ctx *gofr.Context, customer *model.Customer) 
 	return d.GetByID(ctx, strconv.Itoa(customer.ID))
 }
 
+// Delete --used to make DELETE request to delete the item
 func (d *CustomerDatastore) Delete(ctx *gofr.Context, id string) error {
 	queryDelete := "DELETE FROM customers WHERE id = ?"
 

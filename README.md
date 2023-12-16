@@ -1,5 +1,5 @@
 
- ![Coverage](https://img.shields.io/badge/Coverage-100%35-brightgreen)
+ ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
 
 
 # customer management system api using gofr framework

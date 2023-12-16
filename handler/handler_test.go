@@ -32,8 +32,8 @@ func TestCreate(t *testing.T) {
 
 	input := `{
 		"id": 1,
-		"name": "John Doe",
-		"email": "john.doe@example.com",
+		"name": "Chetan Kushwah",
+		"email": "chetankushwah929@gmail.com",
 		"phone": "1234567890",
 		"address": "123 Main St",
 		"city": "Anytown",
@@ -43,8 +43,8 @@ func TestCreate(t *testing.T) {
 
 	expResp := &model.Customer{
 		ID:          1,
-		Name:        "John Doe",
-		Email:       "john.doe@example.com",
+		Name:        "Chetan Kushwah",
+		Email:       "chetankushwah929@gmail.com",
 		Phone:       "1234567890",
 		Address:     "123 Main St",
 		City:        "Anytown",
@@ -82,8 +82,8 @@ func TestCreate_Error(t *testing.T) {
 			desc: "create with invalid body",
 			input: `{
 				"id": 1,
-				"name": "John Doe",
-				"email": "john.doe@example.com",
+				"name": "Chetan Kushwah",
+				"email": "chetankushwah929@gmail.com",
 				"phone": "1234567890",
 				"address": "123 Main St",
 				"city": "Anytown",
@@ -128,15 +128,14 @@ func TestGetAll(t *testing.T) {
 	mockData := []*model.Customer{
 		{
 			ID:          1,
-			Name:        "John Doe",
-			Email:       "john.doe@example.com",
+			Name:        "Chetan Kushwah",
+			Email:       "chetankushwah929@gmail.com",
 			Phone:       "1234567890",
 			Address:     "123 Main St",
 			City:        "Anytown",
 			DateOfBirth: "1990-01-01",
 			IsActive:    true,
 		},
-		// Add more mock data as needed
 	}
 
 	mockStore.EXPECT().GetAll(gomock.Any()).Return(mockData, nil).MaxTimes(1)
@@ -152,12 +151,12 @@ func TestGetByID(t *testing.T) {
 
 	mockData := &model.Customer{
 		ID:          1,
-		Name:        "John Doe",
-		Email:       "john.doe@example.com",
+		Name:        "Chetan Kushwah",
+		Email:       "chetankushwah929@gmail.com",
 		Phone:       "1234567890",
 		Address:     "123 Main St",
 		City:        "Anytown",
-		DateOfBirth: "1990-01-01",
+		DateOfBirth: "1890-01-01",
 		IsActive:    true,
 	}
 
@@ -179,7 +178,7 @@ func TestUpdate(t *testing.T) {
 		Phone:       "1234567890",
 		Address:     "123 Main St",
 		City:        "Anytown",
-		DateOfBirth: "1990-01-01",
+		DateOfBirth: "1900-01-01",
 		IsActive:    true,
 	}
 
@@ -194,7 +193,7 @@ func TestUpdate(t *testing.T) {
 func TestDelete(t *testing.T) {
 	mockStore, h, app := initializeHandlerTest(t)
 
-	mockData := "Data Deleted successfully"
+	mockData := "Data Deleted successfully From the DB"
 
 	mockStore.EXPECT().Delete(gomock.Any(), gomock.Any()).Return(nil).MaxTimes(1)
 

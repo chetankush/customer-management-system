@@ -93,5 +93,5 @@ func (h Handler) Delete(ctx *gofr.Context) (interface{}, error) {
 		return nil, errors.DB{Err: err}
 	}
 
-	return "Data Deleted successfully", nil
+	return "Data Deleted successfully From the DB", nil
 }

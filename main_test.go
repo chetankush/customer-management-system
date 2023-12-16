@@ -25,8 +25,8 @@ func TestIntegration(t *testing.T) {
 	}{
 		{"create customer", http.MethodPost, "customer", http.StatusCreated, toJSONString(model.Customer{
 			ID:          1,
-			Name:        "John Doe",
-			Email:       "john@example.com",
+			Name:        "Chetan Kushwah",
+			Email:       "chetankushwah929@gmail.com",
 			Phone:       "1234567890",
 			Address:     "123 Main St",
 			City:        "Anytown",
@@ -37,8 +37,8 @@ func TestIntegration(t *testing.T) {
 		{"get customer by ID", http.MethodGet, "customer/1", http.StatusOK, nil},
 		{"update customer", http.MethodPut, "customer", http.StatusOK, toJSONString(model.Customer{
 			ID:          1,
-			Name:        "John Doe",
-			Email:       "john.doe@example.com",
+			Name:        "Chetan Kushwah",
+			Email:       "chetankushwah929@gmail.com",
 			Phone:       "9876543210",
 			Address:     "456 Oak St",
 			City:        "Newtown",
@@ -49,7 +49,7 @@ func TestIntegration(t *testing.T) {
 	}
 
 	for i, tc := range tests {
-		req, _ := request.NewMock(tc.method, "http://localhost:9000/"+tc.endpoint, bytes.NewBuffer(tc.body))
+		req, _ := request.NewMock(tc.method, "http://localhost:3000/"+tc.endpoint, bytes.NewBuffer(tc.body))
 
 		c := http.Client{}
 

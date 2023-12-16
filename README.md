@@ -1,93 +1,82 @@
 
-
-https://img.shields.io/badge/Coverage-91%25-brightgreen
+ ![Coverage](https://img.shields.io/badge/Coverage-100%35-brightgreen)
 
 
 # customer management system api using gofr framework
 
-One Paragraph of project description goes here
+API for customer management system using gofr with crud operations with testing coverage 100%
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+download the zip by clicking code button on the upper left side of repository home page and extract the file to use it 
+
+run this command -> go run main.go (use it in project root directory terminal on your local machine for development and testing purposes.)
+to run the tests -> go test (use it in project root directory terminal on your local machine for testing purposes.)
+to see the coverage -> go test -v --cover (to see the coverage of this project)
+
+
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+install Go on your system
 
-```
-Give examples
-```
+install Gofr -> go get gofr.dev
+
+install docker on your system then refer this gofr documentation for mysql intallation -> https://gofr.dev/docs/v1/quick-start/connecting-mysql
+  
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+download the project zip and extract it on the desktop to access easily
 
-```
-Give the example
-```
+install docker on your system then refer this gofr documentation for mysql intallation and connection -> https://gofr.dev/docs/v1/quick-start/connecting-mysql
+  
+create your own table and db on mysql - name it as you want
 
-And repeat
+use these commands to access the mysql on docker ->
 
-```
-until finished
-```
+ docker exec -it gofr-mysql bash
+ bash-4.4# mysql -u root -p<your mysql password for docker image> dont add space after write like this -> -proot876
+ show databases (to see all databases)
+ use <your database name> that you created using gofr-mysql documentation
+ 
+ then run go run main.go
 
-End with an example of getting some data out of the system or using it for a little demo
+to see the data go to localhost:3000/customer
+
+to see data by id go to localhost:3000/customer/2
+
+
+use postman to make post, update and delete request 
+
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+ for testing -> install sql-mock if not present 
 
-### Break down into end to end tests
+ then run these commands in root directory -> go test
+                           To see coverage -> go test -v --cover
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* Gofr - The go lang framework
+* GORM - The Object-Relational Mapping (ORM) framework, acts as a bridge between Go objects and relational databases.
+* sqlmock - go get gopkg.in/DATA-DOG/go-sqlmock.v1
+* mockgen - for mocking the datastore layer
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+go version go1.21.4 windows/amd64
 
-## Authors
+Docker version 24.0.7, build afdd53b
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+mysql:8.0.30 IN USE
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+## Author
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* **Chetan Kushwah** 
 

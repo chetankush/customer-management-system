@@ -9,12 +9,13 @@ postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
 
 * Diagrams (scroll down to see them)
 
-## Getting Started
-
-pull the docker image using this command after installing docker on your system
+docker image of project
 
      docker pull chetankushwah/gofr-mysql:hubtest
 
+
+
+## Getting Started
 
 Download the zip by clicking code button on the upper left side of repository home page and extract the file to use it 
 

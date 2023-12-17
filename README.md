@@ -88,7 +88,7 @@ mysql:8.0.30 IN USE
 
 Use Case Diagram
 
-![usecase](https://github.com/chetankush/customer-management-system/assets/78559285/1bcafdc8-670c-452f-b98b-7e6f70b3689d)
+![usecase](https://github.com/chetankush/customer-management-system/assets/78559285/55686791-5ca6-416b-9b86-faaeca89622f)
 
 
 Sequence Diagram
@@ -98,5 +98,6 @@ Sequence Diagram
 ## Author
 
 * **Chetan Kushwah** 
+
 
 

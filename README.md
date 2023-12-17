@@ -57,26 +57,24 @@ to see the data go to localhost:3000/customer
 
 to see data by id go to localhost:3000/customer/2
 
-
 use postman to make post, update and delete request 
+
+Postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
 
 
 ## To Run tests
 
- for testing -> install sql-mock using this command **go get gopkg.in/DATA-DOG/go-sqlmock.v1**  (incase if you dont have) 
+ for testing -> install sql-mock using this command 
+ 
+    go get gopkg.in/DATA-DOG/go-sqlmock.v1 
 
  then run these commands in root directory ->
  
     go test
  
-To see coverage -> 
+ To see coverage -> 
 
     go test -v --cover
-
-
-## postman collection
-
-postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
 
 
 ## Built With

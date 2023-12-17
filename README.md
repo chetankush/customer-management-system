@@ -86,7 +86,7 @@ To see coverage ->
 
 * Gofr - The go lang framework
 * GORM - The Object-Relational Mapping (ORM) framework, acts as a bridge between Go objects and relational databases.
-* sqlmock - go get gopkg.in/DATA-DOG/go-sqlmock.v1
+* sqlmock - used to simulate any sql driver behavior in tests, without needing a real database connection. 
 * mockgen - for mocking the datastore layer
 
 

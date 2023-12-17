@@ -11,6 +11,10 @@ postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
 
 ## Getting Started
 
+pull the docker image using this command 
+
+     docker pull chetankushwah/gofr-mysql:hubtest
+
 download the zip by clicking code button on the upper left side of repository home page and extract the file to use it 
 
 run this command -> go run main.go (use it in project root directory terminal on your local machine for development and testing purposes.)

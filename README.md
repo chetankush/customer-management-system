@@ -87,14 +87,16 @@ mysql:8.0.30 IN USE
 ## Diagrams
 
 Use Case Diagram
-![WhatsApp Image 2023-12-17 at 14 21 19](https://github.com/chetankush/customer-management-system/assets/78559285/932fddf5-6af8-4b33-a7af-e3279bdc136e)
+
+![usecase](https://github.com/chetankush/customer-management-system/assets/78559285/1bcafdc8-670c-452f-b98b-7e6f70b3689d)
 
 
 Sequence Diagram
-![WhatsApp Image 2023-12-17 at 14 21 37](https://github.com/chetankush/customer-management-system/assets/78559285/5c8dd528-5fbc-4b15-9d85-19749f72aaf7)
+![sequence](https://github.com/chetankush/customer-management-system/assets/78559285/084a0d05-523a-4b05-96fd-b7b30563a12b)
 
 
 ## Author
 
 * **Chetan Kushwah** 
+
 

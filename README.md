@@ -1,10 +1,11 @@
 
  ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
 
-
 # customer management system api using gofr framework
 
-API for customer management system using gofr with crud operations with testing coverage 100%
+API for customer management system using gofr with crud operations
+
+postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
 
 ## Getting Started
 
@@ -80,6 +81,16 @@ go version go1.21.4 windows/amd64
 Docker version 24.0.7, build afdd53b
 
 mysql:8.0.30 IN USE
+
+## Diagrams
+
+Use Case Diagram
+![WhatsApp Image 2023-12-17 at 14 21 19](https://github.com/chetankush/customer-management-system/assets/78559285/932fddf5-6af8-4b33-a7af-e3279bdc136e)
+
+
+Sequence Diagram
+![WhatsApp Image 2023-12-17 at 14 21 37](https://github.com/chetankush/customer-management-system/assets/78559285/5c8dd528-5fbc-4b15-9d85-19749f72aaf7)
+
 
 ## Author
 

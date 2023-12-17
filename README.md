@@ -46,13 +46,20 @@ create your own table and db on mysql - name it as you want
 
 bash-4.4# mysql -u root -p<your mysql password for docker image> dont add space after -p write it like this -> -proot123
 
-show databases (to see all databases)
+    bash-4.4# mysql -u root -p<password>
+    
+    show databases (to see all databases)
 
 use <your database name> that you created using gofr-mysql documentation
+
+    use test_db
+
+
+## To Run project
  
-then run 
+use this command 
     
-    **go run main.go**
+    go run main.go
 
 to see the data go to localhost:3000/customer
 
@@ -62,7 +69,7 @@ to see data by id go to localhost:3000/customer/2
 use postman to make post, update and delete request 
 
 
-## Running the tests
+## To Run tests
 
  for testing -> install sql-mock using this command **go get gopkg.in/DATA-DOG/go-sqlmock.v1**  (incase if you dont have) 
 

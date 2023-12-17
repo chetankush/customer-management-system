@@ -1,57 +1,61 @@
+![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
 
- ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)
+# Customer Management System API using Gofr Framework
 
-# customer management system api using gofr framework
-
-API for customer management system using gofr with crud operations
+API for a customer management system using Gofr with CRUD operations.
 
 ## Getting Started
 
-Download the zip by clicking code button on the upper left side of repository home page and extract the file 
+1. **Download the zip file** by clicking the "Code" button on the upper left side of the repository home page and extract the files.
 
-Run this command to run the project -> 
+2. **Run the project:**
 
-    go run main.go 
-    
+    ```Go
+    go run main.go
+    ```
 
-To run the tests -> 
+3. **To run tests:**
 
-    go test 
+    ```Go
+    go test
+    ```
 
-To see the coverage -> 
- 
-    go test -v --cover 
+4. **To see the coverage:**
+
+    ```Go
+    go test -v --cover
+    ```
 
 ### Prerequisites
 
-install Go on your system
+- Install Go on your system.
+- Install Gofr: `go get gofr.dev`.
+- Install Docker on your system.
 
-install Gofr -> go get gofr.dev
+### Install MySQL on Docker
 
-install docker on your system 
+1. **Install Docker on your system.**
+2. **Refer to the Gofr documentation for MySQL installation and connection:** [Gofr MySQL Documentation](https://gofr.dev/docs/v1/quick-start/connecting-mysql).
 
+3. **Use these commands to access the MySQL database on Docker:**
 
-### Install mysql on docker
-
-install docker on your system then refer to gofr documentation for mysql intallation and connection -> https://gofr.dev/docs/v1/quick-start/connecting-mysql
-
-
-**use these commands to access the mysql database on docker ->**
-
+    ```bash
     docker exec -it gofr-mysql bash
+    ```
 
-bash-4.4# mysql -u root -proot123 dont add space after -p write it like this -> -proot123
+    ```bash
+    mysql -u root -proot123
+    ```
 
-    mysql -u root -p<password>
-    
-Now u can acces the mysql 
+    Now you can access MySQL.
 
+## To Run the Project
 
-## To Run project
- 
-use this command 
-    
-    go run main.go
+Use this command:
+
+```Go
+go run main.go
+```
 
 to see the data go to localhost:3000/customer
 

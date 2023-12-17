@@ -10,6 +10,7 @@ API for a customer management system using Gofr with CRUD operations.
 
 2. **Run the project:**
 
+
     ```Go
     go run main.go
     ```
@@ -55,9 +56,9 @@ API for a customer management system using Gofr with CRUD operations.
 
 Use this command:
 
-    ```Go
+   ```Go
     go run main.go
-    ```
+   ```
 
 
 to see the data go to localhost:3000/customer
@@ -73,14 +74,14 @@ Postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
 
  run these commands in root directory ->
  
-    ```Go
+   ```Go
     go test
-    ```
+   ```
  To see coverage -> 
  
-    ```G
+   ```G
     go test -v --cover
-    ```
+   ```
 
 ## Built With
 

@@ -62,10 +62,11 @@ use postman to make post, update and delete request
 
 ## Running the tests
 
- for testing -> install sql-mock if not present 
+ for testing -> install sql-mock using this command ** go get gopkg.in/DATA-DOG/go-sqlmock.v1**  (incase if you dont have) 
 
  then run these commands in root directory ->**go test**
-                           To see coverage ->**go test -v --cover**
+ 
+                           To see coverage -> **go test -v --cover**
 
 
 ## Built With

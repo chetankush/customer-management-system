@@ -68,11 +68,7 @@ Postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
 
 ## To Run tests
 
- for testing -> install sql-mock using this command 
- 
-    go get gopkg.in/DATA-DOG/go-sqlmock.v1 
-
- then run these commands in root directory ->
+ run these commands in root directory ->
  
     go test
  

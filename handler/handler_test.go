@@ -99,7 +99,7 @@ func TestCreate_Error(t *testing.T) {
 			expResp: &model.Customer{},
 			err:     errors.InvalidParam{Param: []string{"body"}},
 		},
-		// Add more test cases as needed
+	
 	}
 
 	for i, tc := range tests {
@@ -124,7 +124,6 @@ func TestCreate_Error(t *testing.T) {
 func TestGetAll(t *testing.T) {
 	mockStore, h, app := initializeHandlerTest(t)
 
-	// Assuming you have some mock data for GetAll
 	mockData := []*model.Customer{
 		{
 			ID:          1,
@@ -143,6 +142,7 @@ func TestGetAll(t *testing.T) {
 	resp, err := h.GetAll(gofr.NewContext(nil, nil, app))
 
 	assert.Nil(t, err, "TestGetAll: failed - success case")
+
 	assert.Equal(t, mockData, resp, "TestGetAll: failed - success case")
 }
 
@@ -165,6 +165,7 @@ func TestGetByID(t *testing.T) {
 	resp, err := h.GetByID(gofr.NewContext(nil, nil, app))
 
 	assert.Nil(t, err, "TestGetByID: failed - success case")
+
 	assert.Equal(t, mockData, resp, "TestGetByID: failed - success case")
 }
 
@@ -174,7 +175,7 @@ func TestUpdate(t *testing.T) {
 	mockData := &model.Customer{
 		ID:          1,
 		Name:        "Updated Name",
-		Email:       "john.doe@example.com",
+		Email:       "chetankushwah999@gmail.com",
 		Phone:       "1234567890",
 		Address:     "123 Main St",
 		City:        "Anytown",
@@ -187,18 +188,21 @@ func TestUpdate(t *testing.T) {
 	resp, err := h.Update(gofr.NewContext(nil, nil, app))
 
 	assert.Nil(t, err, "TestUpdate: failed - success case")
+
 	assert.Equal(t, mockData, resp, "TestUpdate: failed - success case")
 }
 
 func TestDelete(t *testing.T) {
 	mockStore, h, app := initializeHandlerTest(t)
 
-	mockData := "Data Deleted successfully From the DB"
+	mockData := "Data Deleted successfully"
 
 	mockStore.EXPECT().Delete(gomock.Any(), gomock.Any()).Return(nil).MaxTimes(1)
 
-	resp, err := h.Delete(gofr.NewContext(nil, nil, app))
+    	resp, err := h.Delete(gofr.NewContext(nil, nil, app))
 
 	assert.Nil(t, err, "TestDelete: failed - success case")
+
+
 	assert.Equal(t, mockData, resp, "TestDelete: failed - success case")
 }

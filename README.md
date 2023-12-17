@@ -7,13 +7,7 @@ API for customer management system using gofr with crud operations
 
 postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
 
-* Diagrams (scroll down to see them)
-
-docker image of project
-
-     docker pull chetankushwah/gofr-mysql:hubtest
-
-
+Diagrams (scroll down to see them)
 
 ## Getting Started
 

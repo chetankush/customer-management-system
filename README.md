@@ -7,7 +7,7 @@ API for customer management system using gofr with crud operations
 
 postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
 
-* Diagrams are in the end
+* Diagrams (scroll down to see them)
 
 ## Getting Started
 

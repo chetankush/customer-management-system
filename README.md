@@ -30,11 +30,11 @@ install Gofr -> go get gofr.dev
 
 install docker on your system 
 
+
 ### Install mysql on docker
 
 install docker on your system then refer to gofr documentation for mysql intallation and connection -> https://gofr.dev/docs/v1/quick-start/connecting-mysql
 
-create your own table and db on mysql - name it as you want
 
 **use these commands to access the mysql database on docker ->**
 

@@ -40,13 +40,11 @@ create your own table and db on mysql - name it as you want
 
     docker exec -it gofr-mysql bash
 
-bash-4.4# mysql -u root -p<your mysql password for docker image> dont add space after -p write it like this -> -proot123
+bash-4.4# mysql -u root -proot123 dont add space after -p write it like this -> -proot123
 
-    bash-4.4# mysql -u root -p<password>
+    mysql -u root -p<password>
     
-use <your database name> that you created using gofr-mysql documentation
-
-    use test_db
+Now u can acces the mysql 
 
 
 ## To Run project

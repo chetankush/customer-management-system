@@ -5,21 +5,22 @@
 
 API for customer management system using gofr with crud operations
 
-postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
-
-Diagrams (scroll down to see them)
-
 ## Getting Started
 
-Download the zip by clicking code button on the upper left side of repository home page and extract the file to use it 
+Download the zip by clicking code button on the upper left side of repository home page and extract the file 
 
-Run this command -> go run main.go (use it in project root directory terminal on your local machine for development and testing purposes.)
+Run this command to run the project -> 
 
-To run the tests -> go test (use it in project root directory terminal on your local machine for testing purposes.)
+    go run main.go 
+    
 
-To see the coverage -> go test -v --cover (to see the coverage of this project)
+To run the tests -> 
 
+    go test 
 
+To see the coverage -> 
+ 
+    go test -v --cover 
 
 ### Prerequisites
 
@@ -27,20 +28,15 @@ install Go on your system
 
 install Gofr -> go get gofr.dev
 
-install docker on your system then refer this gofr documentation for mysql intallation -> https://gofr.dev/docs/v1/quick-start/connecting-mysql
-  
+install docker on your system 
 
-### Install and Run project
+### Install mysql on docker
 
-A step by step series of examples that tell you how to get a development env running
+install docker on your system then refer to gofr documentation for mysql intallation and connection -> https://gofr.dev/docs/v1/quick-start/connecting-mysql
 
-download the project zip and extract it on the desktop to access easily
-
-install docker on your system then refer to gofr documentation for mysql intallation and connection
-  
 create your own table and db on mysql - name it as you want
 
-**use these commands to access the mysql on docker ->**
+**use these commands to access the mysql database on docker ->**
 
     docker exec -it gofr-mysql bash
 
@@ -48,8 +44,6 @@ bash-4.4# mysql -u root -p<your mysql password for docker image> dont add space 
 
     bash-4.4# mysql -u root -p<password>
     
-    show databases (to see all databases)
-
 use <your database name> that you created using gofr-mysql documentation
 
     use test_db
@@ -80,6 +74,11 @@ use postman to make post, update and delete request
 To see coverage -> 
 
     go test -v --cover
+
+
+## postman collection
+
+postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
 
 
 ## Built With

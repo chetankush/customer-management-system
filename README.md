@@ -79,7 +79,7 @@ Postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
    ```
  To see coverage -> 
  
-   ```G
+   ```Go
     go test -v --cover
    ```
 

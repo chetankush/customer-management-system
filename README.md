@@ -6,6 +6,8 @@
 
 API for customer management system using gofr with crud operations
 
+postman collection - https://documenter.getpostman.com/view/31714271/2s9Ykn92Fy
+
 ## Getting Started
 
 download the zip by clicking code button on the upper left side of repository home page and extract the file to use it 
@@ -34,7 +36,7 @@ A step by step series of examples that tell you how to get a development env run
 download the project zip and extract it on the desktop to access easily
 
 
-install docker on your system then refer this gofr documentation for mysql intallation and connection -> https://gofr.dev/docs/v1/quick-start/connecting-mysql
+install docker on your system then refer this gofr documentation for mysql intallation and connection
 
   
 create your own table and db on mysql - name it as you want

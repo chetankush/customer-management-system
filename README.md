@@ -26,6 +26,8 @@ API for a customer management system using Gofr with CRUD operations.
     go test -v --cover
     ```
 
+**step by step instructions**
+
 ### Prerequisites
 
 - Install Go on your system.
